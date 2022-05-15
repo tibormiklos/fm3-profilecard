@@ -17,22 +17,24 @@ body {
     font-family: 'Kumbh Sans', Helvetica, Arial, sans-serif;
     color: var(--dark-blue);
     font-size: 18px;
-    background-image: url(images/bg-pattern-top.svg);
-    background-position:-50%;
-    background-image: url(images/bg-pattern-bottom.svg);
-    background-position:50%;
-    background-repeat:no-repeat;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-size: 80%;
+    background-position: -175% 225%, 225% -175%;
+    background-repeat: no-repeat;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}   
 
 .card {
     background: white;
     width: 375px;
     text-align: center;
     border-radius: 22px;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow:rgb(45, 50, 72, 0.3) 0px 30px 30px ;
 }
 
@@ -57,14 +59,14 @@ body {
 }
 
 .info h1 {
-    margin-bottom:0px;
-    padding-bottom:0;
+    margin-top:40px;
+    margin-bottom:20px;
     font-size: 18px;
     color: var(--dark-blue);
 }
 
 .info p {
-    margin:0;
+    font-size:16px;
 }
 
 .info h1 span {
@@ -84,11 +86,17 @@ body {
     font-size: 15px;
     justify-content: space-between;
     margin:0;
-    padding:25px 50px;
-    border-top:1px solid var(--dark-gray);
+    padding:30px 50px;
+    border-top:1px solid rgb(150, 150, 150,.25);
+    
 }
 .stats ul li span {
     font-size: 18px;
     font-weight:700;
     color: var(--dark-blue);
+}
+
+.stats ul li {
+    font-size:14px;
+    letter-spacing:.05em;
 }
